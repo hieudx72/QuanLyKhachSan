@@ -24,10 +24,13 @@ namespace QuanLyKhachSan.Model
 
         public int idPhong { get; set; }
 
-        [StringLength(10)]
-        public string NgayDi { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime NgayDi { get; set; }
 
-        public int NgayDen { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime NgayDen { get; set; }
+
+        public double GiaTien { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HOADON> HOADONs { get; set; }

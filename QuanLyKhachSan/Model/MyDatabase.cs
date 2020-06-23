@@ -5,10 +5,10 @@ namespace QuanLyKhachSan.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class MyDatabase : DbContext
+    public partial class MyDataBase : DbContext
     {
-        public MyDatabase()
-            : base("name=MyDatabase")
+        public MyDataBase()
+            : base("name=MyDataBase")
         {
         }
 
@@ -21,8 +21,8 @@ namespace QuanLyKhachSan.Model
         public virtual DbSet<NHANVIEN> NHANVIENs { get; set; }
         public virtual DbSet<PHONG> PHONGs { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<THIETBI> THIETBIs { get; set; }
         public virtual DbSet<THUEPHONG> THUEPHONGs { get; set; }
+        public virtual DbSet<THIETBI> THIETBIs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -90,18 +90,16 @@ namespace QuanLyKhachSan.Model
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<PHONG>()
-                .HasOptional(e => e.THIETBI)
-                .WithRequired(e => e.PHONG);
+                .HasMany(e => e.THIETBIs)
+                .WithRequired(e => e.PHONG)
+                .HasForeignKey(e => e.idPhong)
+                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<PHONG>()
                 .HasMany(e => e.THUEPHONGs)
                 .WithRequired(e => e.PHONG)
                 .HasForeignKey(e => e.idPhong)
                 .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<THUEPHONG>()
-                .Property(e => e.NgayDi)
-                .IsFixedLength();
 
             modelBuilder.Entity<THUEPHONG>()
                 .HasMany(e => e.HOADONs)

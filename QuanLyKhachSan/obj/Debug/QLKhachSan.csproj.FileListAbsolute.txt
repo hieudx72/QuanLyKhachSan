@@ -1,0 +1,6 @@
+C:\Users\pc\Desktop\ttn\Hieu\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QLKhachSan.csprojAssemblyReference.cache
+C:\Users\pc\Desktop\ttn\Hieu\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QLKhachSan.FormDoiMatKhau.resources
+C:\Users\pc\Desktop\ttn\Hieu\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QLKhachSan.FormLogin.resources
+C:\Users\pc\Desktop\ttn\Hieu\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QLKhachSan.FormMain.resources
+C:\Users\pc\Desktop\ttn\Hieu\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Properties.Resources.resources
+C:\Users\pc\Desktop\ttn\Hieu\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QLKhachSan.csproj.GenerateResource.cache

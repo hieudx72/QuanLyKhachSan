@@ -10,13 +10,18 @@ namespace QuanLyKhachSan.Model
     public partial class THIETBI
     {
         [Key]
+        [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int idPhong { get; set; }
 
-        [Required]
+        [Key]
+        [Column(Order = 1)]
         [StringLength(255)]
         public string TenThietBi { get; set; }
 
+        [Key]
+        [Column(Order = 2)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int SoLuong { get; set; }
 
         public virtual PHONG PHONG { get; set; }

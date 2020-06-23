@@ -19,7 +19,9 @@ namespace QuanLyKhachSan.Model
         [StringLength(255)]
         public string TenNV { get; set; }
 
-        public bool GioiTinh { get; set; }
+        [Required]
+        [StringLength(10)]
+        public string GioiTinh { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime NgaySinh { get; set; }

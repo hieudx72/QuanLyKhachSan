@@ -13,6 +13,7 @@ namespace QuanLyKhachSan.Model
         public PHONG()
         {
             DATPHONGs = new HashSet<DATPHONG>();
+            THIETBIs = new HashSet<THIETBI>();
             THUEPHONGs = new HashSet<THUEPHONG>();
         }
 
@@ -31,7 +32,8 @@ namespace QuanLyKhachSan.Model
 
         public virtual LOAIPHONG LOAIPHONG { get; set; }
 
-        public virtual THIETBI THIETBI { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<THIETBI> THIETBIs { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<THUEPHONG> THUEPHONGs { get; set; }
