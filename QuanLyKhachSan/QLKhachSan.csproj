@@ -73,9 +73,23 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhong.designer.cs">
+      <DependentUpon>FormPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThietBiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThietBiPhong.designer.cs">
+      <DependentUpon>FormThietBiPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\CHUCVU.cs" />
+    <Compile Include="Model\DAO\DataProvider.cs" />
     <Compile Include="Model\DAO\LoginDao.cs" />
-    <Compile Include="Model\DataProvider.cs" />
+    <Compile Include="Model\DAO\PhongDao.cs" />
+    <Compile Include="Model\DAO\ThietBiDao.cs" />
     <Compile Include="Model\DATPHONG.cs" />
     <Compile Include="Model\DICHVU.cs" />
     <Compile Include="Model\HOADON.cs" />
@@ -97,6 +111,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhong.resx">
+      <DependentUpon>FormPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThietBiPhong.resx">
+      <DependentUpon>FormThietBiPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
